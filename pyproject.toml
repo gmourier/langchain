@@ -106,6 +106,7 @@ pyspark = {version = "^3.4.0", optional = true}
 tigrisdb = {version = "^1.0.0b6", optional = true}
 nebula3-python = {version = "^3.4.0", optional = true}
 langchainplus-sdk = ">=0.0.7"
+meilisearch = {version = "^0.28.0", optional = true }
 
 
 [tool.poetry.group.docs.dependencies]
@@ -150,7 +151,7 @@ optional = true
 # 2. Add the package name to the extended_testing extra (find it below)
 # 3. Relock the poetry file
 #       poetry lock --no-update
-# 4. Favor unit tests not integration tests. 
+# 4. Favor unit tests not integration tests.
 #    Use the @pytest.mark.requires(pkg_name) decorator in unit_tests.
 #    Your tests should not rely on network access, as it prevents other
 #    developers from being able to easily run them.
@@ -286,6 +287,7 @@ all = [
     "singlestoredb",
     "tigrisdb",
     "nebula3-python",
+    "meilisearch",
 ]
 
 # An extra used to be able to add extended testing.
